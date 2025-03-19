@@ -1,31 +1,19 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import './App.css'
-import { axiosGames } from "./redux/slices/thunk/gamesThunks"
-// import { useSelector } from 'react-redux'
-// import { RootState } from '@reduxj'
+import { axiosGamesThunk } from "./redux/slices/thunk/gamesThunks"
 import { useAppDispatch, useAppSelector } from './redux/hook'
 
 
-// const [games, setGames] = useState<any>([])
-// console.log(games)
-// const getGames = async () => {
-//   setTimeout(async () => {
-//     const data = await axiosGames()
-//     setGames(data)
-//   }, 1000);
-// }
-
-// useEffect(() => {
-//   getGames()
-// }, [])
-
-function App() {
-
+const App = () => {
   const { games, isLoading } = useAppSelector((state) => state.game);
   const dispatch = useAppDispatch()
 
   useEffect(() => {
-    dispatch(axiosGames())
+    // const game = async () => {
+    //   await axiosGames()
+    // }
+    // game()
+    dispatch(axiosGamesThunk())
   }, [])
 
   return (
