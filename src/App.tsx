@@ -1,11 +1,13 @@
-import './App.css'
-import { AppRouter } from './router/AppRouter'
+import { AppRouter } from './router/AppRouter';
+import './App.css';
 
 
 const App = () => {
   return (
-    <AppRouter />
-  )
-}
+    <div className="background-image">
+      <AppRouter />
+    </div>
+  );
+};
 
-export default App
+export default App;

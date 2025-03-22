@@ -24,7 +24,7 @@ export const GameDetail = () => {
 
   useEffect(() => {
     getGameDetail()
-  }, [])
+  }, []);
 
   const handleBack = () => {
     navigate(-1);
@@ -43,8 +43,7 @@ export const GameDetail = () => {
             src={gameDetail?.background_image}
             alt={gameDetail?.name_original}
             className="img-thumbnail"
-            height="300px"
-          /> 
+          />
         </div>
         <div className="col-6">
           <p><b>Titulo Original: </b>{gameDetail?.name_original}/</p>

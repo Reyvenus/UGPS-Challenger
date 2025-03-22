@@ -18,7 +18,7 @@ export const ListCardGame: React.FC<Props> = ({ games, isLoading, dispatch }) =>
       <Loading
         isLoading={isLoading}
       />
-      <Search 
+      <Search
         isLoading={isLoading}
         dispatch={dispatch}
       />

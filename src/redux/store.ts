@@ -1,5 +1,5 @@
-import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit'
-import gameSlice from "./slices/gameSlice"
+import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
+import gameSlice from "./slices/gameSlice";
 
 
 export const store = configureStore({
@@ -15,4 +15,4 @@ export type Thunk = ThunkAction<
   RootState,
   unknown,
   Action<any>
->
+>;
