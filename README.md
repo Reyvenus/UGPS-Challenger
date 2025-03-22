@@ -1,50 +1,31 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Web App de Videojuegos  
 
-Currently, two official plugins are available:
+Este proyecto es una pequeña web app sobre videojuegos, desarrollada utilizando la API de [RAWG](https://rawg.io/apidocs) para obtener información sobre los juegos.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías utilizadas  
 
-## Expanding the ESLint configuration
+- **Node.js**: Versión 20.18.0  
+- **React**: Versión 18  
+- **TypeScript**  
+- **Redux**: Para la gestión global del estado  
+- **React Router DOM**: Para la navegación  
+- **Bootstrap**: Con estilos personalizados y clases adaptadas  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Características  
 
-- Configure the top-level `parserOptions` property like this:
+- Se siguieron los requerimientos especificados en el desarrollo del proyecto.  
+- Redux se utilizó para manejar de manera eficiente los estados globales de la aplicación.  
+- Se implementaron componentes reutilizables y clases personalizadas de Bootstrap para mejorar la UI/UX.  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Instalación y ejecución  
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Para ejecutar la aplicación:  
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Instalar las dependencias:  
+   ```sh
+   npm install
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. Iniciar la aplicación en modo desarrollo
+     ```sh
+   npm run dev
